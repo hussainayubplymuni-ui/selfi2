@@ -1,0 +1,2 @@
+Hello from my self-hosted EC2 runner!
+This file is being read by GitHub Actions CI/CD pipeline.
