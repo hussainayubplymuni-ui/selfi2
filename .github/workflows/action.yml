@@ -1,0 +1,30 @@
+```yaml
+name: Self Hosted Runner Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show runner information
+        run: |
+          echo "Running on self-hosted runner"
+          hostname
+          whoami
+          pwd
+
+      - name: Read app.txt
+        run: cat app.txt
+
+      - name: Finish
+        run: echo "GitHub Actions completed successfully!"
+```
+
